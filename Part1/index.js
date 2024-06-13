@@ -1,10 +1,25 @@
 console.log("hello");
 
+//Global Variables
+
+let player = "X";
+
+//Functions
+
 function play() {
-  console.log("Square was clicked");
+  if (player === "X") {
+    player = "O";
+  } else {
+    player = "X";
+  }
+  const playerSpan = document.querySelector("#current-player");
+  playerSpan.innerText = player;
+  console.log(playerSpan.innerText);
 }
 
-let squares = document.querySelectorAll(".square");
+//Event listeners
+
+const squares = document.querySelectorAll(".square");
 
 for (const square of squares) {
   square.addEventListener("click", play);
