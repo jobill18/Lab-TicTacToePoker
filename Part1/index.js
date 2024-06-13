@@ -6,7 +6,9 @@ let player = "X";
 
 //Functions
 
-function play() {
+function play(evt) {
+  const targetSquare = evt.target;
+  targetSquare.innerText = player;
   if (player === "X") {
     player = "O";
   } else {
