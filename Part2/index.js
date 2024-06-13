@@ -1,7 +1,14 @@
-console.log("yo");
+// console.log("yo");
 
-const grabID = document.querySelector("#grabID");
-const applyStyle = document.querySelector("#applyStyle");
+const idInput = document.querySelector("#idInput");
+const colorInput = document.querySelector("#colorInput");
 
-console.log(grabID);
-console.log(applyStyle);
+// console.log(idInput);
+// console.log(colorInput);
+
+function setCard() {
+  const card = document.querySelector(`${idInput.value}`);
+  console.log(card);
+}
+
+document.querySelector("#editCardBtn").addEventListener("click", setCard);
